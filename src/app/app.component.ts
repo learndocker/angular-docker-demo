@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import {TodoDataService} from './todo-data.service';
-import {Todo} from './todo';
+import { Component, OnInit } from '@angular/core';
+import { TodoDataService } from './todo-data.service';
+import { Todo } from './todo';
 
 @Component({
   selector: 'app-root',
@@ -9,27 +9,55 @@ import {Todo} from './todo';
   providers: [TodoDataService]
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Angular/Docker Demo';
+  todoList: Todo[] = [];
+  newTodo: Todo = new Todo
+
   constructor(private todoDataService: TodoDataService) {
   }
 
-  newTodo: Todo = new Todo();
+  ngOnInit() {
+    this.getTodos();
+  }
 
-  addTodo() {
-    this.todoDataService.addTodo(this.newTodo);
-    this.newTodo = new Todo();
+  addTodo = function () {
+    this.todoDataService.addTodo(this.newTodo).subscribe(
+      x => {
+        this.getTodos();
+      }, error => {
+        alert("Error in Save");
+        console.log(error);
+      }
+    );
   }
 
   toggleTodoCompletedStatus(todo) {
-    this.todoDataService.toggleTodoCompletedStatus(todo);
+    this.todoDataService.toggleTodoCompletedStatus(todo).subscribe(
+      x => {
+        this.getTodos();
+      }, error => {
+        alert("Error in delete");
+      }
+    );;
   }
 
   removeTodo(todo) {
+    this.todoDataService.deleteTodo(todo).subscribe(
+      x => {
+        this.getTodos();
+      }, error => {
+        alert("Error in delete");
+      }
+    );;
   }
 
-  get todos() {
-    return this.todoDataService.getAllTodos();
+  getTodos = function () {
+    this.todoDataService.getAllTodos()
+      .subscribe(
+          data => {
+            this.todoList = data;
+    });
   }
 }
 

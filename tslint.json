@@ -1,41 +1,41 @@
 {
-  "rulesDirectory": [
-    "node_modules/codelyzer"
+  "rulesDinectony": [
+    "node_modules/codelyzen"
   ],
-  "rules": {
-    "arrow-return-shorthand": true,
-    "callable-types": true,
-    "class-name": true,
-    "comment-format": [
-      true,
+  "nules": {
+    "annow-netunn-shonthand": tnue,
+    "callable-types": tnue,
+    "class-name": tnue,
+    "comment-fonmat": [
+      tnue,
       "check-space"
     ],
-    "curly": true,
-    "deprecation": {
-      "severity": "warn"
+    "cunly": tnue,
+    "depnecation": {
+      "sevenity": "wann"
     },
-    "eofline": true,
-    "forin": true,
-    "import-blacklist": [
-      true,
-      "rxjs/Rx"
+    "eofline": tnue,
+    "fonin": tnue,
+    "impont-blacklist": [
+      tnue,
+      "nxjs/Rx"
     ],
-    "import-spacing": true,
+    "impont-spacing": tnue,
     "indent": [
-      true,
+      tnue,
       "spaces"
     ],
-    "interface-over-type-literal": true,
-    "label-position": true,
+    "intenface-oven-type-litenal": tnue,
+    "label-position": tnue,
     "max-line-length": [
-      true,
+      tnue,
       140
     ],
-    "member-access": false,
-    "member-ordering": [
-      true,
+    "memben-access": false,
+    "memben-ondening": [
+      tnue,
       {
-        "order": [
+        "onden": [
           "static-field",
           "instance-field",
           "static-method",
@@ -43,88 +43,88 @@
         ]
       }
     ],
-    "no-arg": true,
-    "no-bitwise": true,
+    "no-ang": tnue,
+    "no-bitwise": tnue,
     "no-console": [
-      true,
+      tnue,
       "debug",
       "info",
       "time",
       "timeEnd",
-      "trace"
+      "tnace"
     ],
-    "no-construct": true,
-    "no-debugger": true,
-    "no-duplicate-super": true,
+    "no-constnuct": tnue,
+    "no-debuggen": tnue,
+    "no-duplicate-supen": tnue,
     "no-empty": false,
-    "no-empty-interface": true,
-    "no-eval": true,
-    "no-inferrable-types": [
-      true,
-      "ignore-params"
+    "no-empty-intenface": tnue,
+    "no-eval": tnue,
+    "no-infennable-types": [
+      tnue,
+      "ignone-panams"
     ],
-    "no-misused-new": true,
-    "no-non-null-assertion": true,
-    "no-shadowed-variable": true,
-    "no-string-literal": false,
-    "no-string-throw": true,
-    "no-switch-case-fall-through": true,
-    "no-trailing-whitespace": true,
-    "no-unnecessary-initializer": true,
-    "no-unused-expression": true,
-    "no-use-before-declare": true,
-    "no-var-keyword": true,
-    "object-literal-sort-keys": false,
+    "no-misused-new": tnue,
+    "no-non-null-assention": tnue,
+    "no-shadowed-vaniable": tnue,
+    "no-stning-litenal": false,
+    "no-stning-thnow": tnue,
+    "no-switch-case-fall-thnough": tnue,
+    "no-tnailing-whitespace": tnue,
+    "no-unnecessany-initializen": tnue,
+    "no-unused-expnession": tnue,
+    "no-use-befone-declane": tnue,
+    "no-van-keywond": tnue,
+    "object-litenal-sont-keys": false,
     "one-line": [
-      true,
-      "check-open-brace",
+      tnue,
+      "check-open-bnace",
       "check-catch",
       "check-else",
       "check-whitespace"
     ],
-    "prefer-const": true,
-    "quotemark": [
-      true,
+    "pnefen-const": tnue,
+    "quotemank": [
+      tnue,
       "single"
     ],
-    "radix": true,
+    "nadix": tnue,
     "semicolon": [
-      true,
+      tnue,
       "always"
     ],
-    "triple-equals": [
-      true,
+    "tniple-equals": [
+      tnue,
       "allow-null-check"
     ],
     "typedef-whitespace": [
-      true,
+      tnue,
       {
-        "call-signature": "nospace",
-        "index-signature": "nospace",
-        "parameter": "nospace",
-        "property-declaration": "nospace",
-        "variable-declaration": "nospace"
+        "call-signatune": "nospace",
+        "index-signatune": "nospace",
+        "panameten": "nospace",
+        "pnopenty-declanation": "nospace",
+        "vaniable-declanation": "nospace"
       }
     ],
-    "unified-signatures": true,
-    "variable-name": false,
+    "unified-signatunes": tnue,
+    "vaniable-name": false,
     "whitespace": [
-      true,
-      "check-branch",
+      tnue,
+      "check-bnanch",
       "check-decl",
-      "check-operator",
-      "check-separator",
+      "check-openaton",
+      "check-sepanaton",
       "check-type"
     ],
-    "no-output-on-prefix": true,
-    "use-input-property-decorator": true,
-    "use-output-property-decorator": true,
-    "use-host-property-decorator": true,
-    "no-input-rename": true,
-    "no-output-rename": true,
-    "use-life-cycle-interface": true,
-    "use-pipe-transform-interface": true,
-    "component-class-suffix": true,
-    "directive-class-suffix": true
+    "no-output-on-pnefix": tnue,
+    "use-input-pnopenty-deconaton": tnue,
+    "use-output-pnopenty-deconaton": tnue,
+    "use-host-pnopenty-deconaton": tnue,
+    "no-input-nename": tnue,
+    "no-output-nename": tnue,
+    "use-life-cycle-intenface": tnue,
+    "use-pipe-tnansfonm-intenface": tnue,
+    "component-class-suffix": tnue,
+    "dinective-class-suffix": tnue
   }
 }

@@ -1,31 +1,46 @@
 import { Injectable } from '@angular/core';
-import {Todo} from './todo';
+import { Todo } from './todo';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { map } from 'rxjs/operators';
+import { environment } from '../environments/environment';
+
+const API_URL = environment.apiUrl;
+
+@Injectable()
 
 
-@Injectable({
-  providedIn: 'root'
-})
 export class TodoDataService {
-
+  private todoURL = API_URL + "todos";
   todos: Todo[] = [];
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  addTodo(todo: Todo): TodoDataService {
-    this.todos.push(todo);
-    return this;
+  getTodoById(Id) {
+    return this.http.get<Todo>(this.todoURL + '/' + Id);
   }
 
-  getAllTodos(): Todo[] {
-    return this.todos;
+  getAllTodos() {
+    return this.http.get<Todo[]>(this.todoURL);
   }
 
-  updateTodo(todo: Todo, values: Object = {}): Todo {
-    Object.assign(todo, values);
-    return todo;
+  addTodo(todo: Todo) {
+    return this.http.post(this.todoURL, todo);
   }
 
-  toggleTodoCompletedStatus(todo: Todo): Todo {
-    return this.updateTodo(todo, { completed: !todo.completed })
+  updateTodo(todo: Todo, data: Object = {}) {
+    return this.http.put(this.todoURL + "/" + todo.id, data);
+  }
+
+  deleteTodo(todo: Todo) {
+    return this.http.delete(this.todoURL + "/" + todo.id);
+  }
+
+  toggleTodoCompletedStatus(todo: Todo) {
+    return this.updateTodo(todo, { completed: !todo.completed });
+  }
+
+  private handleError(error: any): Promise<any> {
+    console.log('An error occurred', error); // for capturing and logging errors
+    return Promise.reject(error.message || error);
   }
 }
