@@ -1,0 +1,24 @@
+version: '3.4'
+
+services:
+  app:
+    image: jfahrer/angular-demo-backend:latest
+    ports:
+      - 3000:3000
+    environment:
+      - PG_HOST=db
+      - PG_PORT=5432
+      - PG_USERNAME=postgres
+      - PG_PASSWORD=mysecret
+      - RUN_MIGRATIONS=true
+
+  db:
+    image: postgres:9.6-alpine
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+    environment:
+      - PG_USERNAME=postgres
+      - PG_PASSWORD=mysecret
+
+volumes:
+  pg-data:
